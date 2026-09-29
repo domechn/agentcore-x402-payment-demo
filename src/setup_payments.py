@@ -42,7 +42,7 @@ outputs = {o["OutputKey"]: o["OutputValue"] for o in stack["Outputs"]}
 if "privyCredentialProviderArn" not in state:
     print("1. Storing Privy credentials in AgentCore Identity")
     cp = ctrl.create_payment_credential_provider(
-        name="x402demo-privy",
+        name="agentcore-payment-x402-demo-privy",
         credentialProviderVendor="StripePrivy",
         providerConfigurationInput={"stripePrivyConfiguration": {
             "appId": os.environ["PRIVY_APP_ID"],

@@ -35,7 +35,7 @@ def facilitator(path, payment):
     # We send OUR requirement, so the facilitator enforces our amount/asset/payTo, not the buyer's claim.
     body = json.dumps({"x402Version": 2, "paymentPayload": payment, "paymentRequirements": REQUIREMENT}).encode()
     # Cloudflare in front of x402.org rejects urllib's default User-Agent (error 1010).
-    req = urllib.request.Request(FACILITATOR + path, body, {"Content-Type": "application/json", "User-Agent": "x402-demo"})
+    req = urllib.request.Request(FACILITATOR + path, body, {"Content-Type": "application/json", "User-Agent": "agentcore-payment-x402-demo"})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
             return json.load(r)
