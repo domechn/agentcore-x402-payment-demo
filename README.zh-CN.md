@@ -12,6 +12,8 @@ agent.py ──GET /premium──▶ seller.py
                      ◀── 200 + 内容 ──┘
 ```
 
+带动画流程图的详细讲解：[AgentCore Payments × x402 × Privy：本地复现](https://domc.me/zh/posts/agentcore-payments-x402-privy)。
+
 | 文件 | 作用 |
 |---|---|
 | `infra/infra.yaml` | CloudFormation：PaymentsServiceRole（服务读 Privy 凭证）、AgentRole（agent 能付钱，但不能建 session/钱包） |
