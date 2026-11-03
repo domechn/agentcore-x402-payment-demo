@@ -12,6 +12,8 @@ agent.py ──GET /premium──▶ seller.py
                      ◀── 200 + content ──┘
 ```
 
+Walkthrough with an animated flow diagram: [AgentCore Payments × x402 × Privy: Running It Locally](https://domc.me/en/posts/agentcore-payments-x402-privy).
+
 | File | Role |
 |---|---|
 | `infra/infra.yaml` | CloudFormation: PaymentsServiceRole (service reads Privy credentials) and AgentRole (agent can pay, but cannot create sessions/wallets) |
